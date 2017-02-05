@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">hello jacoco</string>
+    <string name="i_am_alive">I am alive!</string>
+</resources>
