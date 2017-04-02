@@ -1,19 +1,19 @@
 This article was published on [Houzz blog](http://blog.houzz.com).
 
-#Android Code Coverage with JaCoCo
+# Android Code Coverage with JaCoCo
 By Uriel Frankel • Wednesday, March 8, 2017
 
 At Houzz, we use automatic testing to ensure that the Houzz App is stable and bug free. With time, the automation test suite has gotten larger, and more comprehensive. As developers, we wanted to measure how much of our code is being tested and to understand what scenarios are accounted for, which not, and what additional automated testing to add. To do this, we used Code Coverage. It is common practice to use Jacoco on Android, specifically, but it’s integration into Jenkins and a continuous integration system is far from simple.
 
 In this article, I will demonstrate how to integrate code coverage into Jenkins automated continuous integration using a simple Android app.
 
-##Simple Demo Project
+## Simple Demo Project
 
 I made an app that contains a screen with one button. Clicking on the button causes the text to appear.
 
 ![Hello Jacoco](http://68.media.tumblr.com/0802f34c5d16988dc9910d43a9c2e187/tumblr_inline_omephfrduK1szgp28_500.gif)
 
-##Unit Testing
+## Unit Testing
 
 To test this app, I chose to use the Espresso framework. This framework is the official framework for Android unit testing. Other frameworks that can be used include Robotium and UIAutomator.
 
@@ -56,7 +56,7 @@ jacoco {
     toolVersion = '0.7.5.201505241946'
 }
 ```
-##Building
+## Building
 
 When running a UI test on the emulator or device the gradle builds two apk files, one for the app, and one for the testing code. Let’s build both the app and the testing app and install them.
 
