@@ -112,7 +112,7 @@ You won’t find it if you search in your computer. That is because this file is
 
 `adb pull /data/user/0/houzz.com.hellojacoco/files/coverage.ec`
 
-##Using the Coverage File
+## Using the Coverage File
 
 Now we have a binary file, and in our case it’s 4.0K in size. But what should we do with it?
 This is the part where most developers get stuck. I dived into the Jacoco projects code and found a ReportGenerator.java file. This class generates a report for an Eclipse project style, so I changed the code a bit and [exported a jar](https://github.com/uriel-frankel/android-code-coverage/raw/master/hellojacoco/android-jacoco-the-missing.jar) that will fit our needs.
@@ -137,7 +137,7 @@ Here are all the classes that we tested. One is the main activity, while the sec
 
 What we see here is all the line that the test visited highlighted in green. If a line is not covered it is highlighted in red. If a “if” clause is passed with one result (true or false) it is highlighted with yellow color.
 
-##Using the Jenkins Plugin
+## Using the Jenkins Plugin
 
 For those who use Jenkins as part of their building process, there is a another option in order to process the coverage binary file. In this case you can install the JaCoCo plugin for Jenkins. After installing it, you need to configure it in the project. We need to go to the post build section and add “Record JaCoCo coverage report”:
 
